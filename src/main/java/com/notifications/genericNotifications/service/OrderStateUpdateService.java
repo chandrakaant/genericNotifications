@@ -20,6 +20,7 @@ public class OrderStateUpdateService {
 
     /**
      * Function to send predefined mail to recepient
+     * Please provide recepient email address
      * @return String confirmation of state change
      * @throws Exception generic exception
      */
@@ -27,7 +28,7 @@ public class OrderStateUpdateService {
         // Business Logic to update or change state to trigger notification
 
         notificationService.sendMimeMessageEmail
-                ("notification@sharklasers.com", STATE_UPDATE_EMAIL_SUBJECT, STATE_UPDATE_EMAIL_GREETINGS + "user name" + STATE_UPDATE_EMAIL_BODY, fromEmail);
+                ("", STATE_UPDATE_EMAIL_SUBJECT, STATE_UPDATE_EMAIL_GREETINGS + "user name" + STATE_UPDATE_EMAIL_BODY, fromEmail);
         return "Updated state";
     }
 
