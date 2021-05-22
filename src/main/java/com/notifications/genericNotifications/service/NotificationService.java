@@ -1,6 +1,5 @@
 package com.notifications.genericNotifications.service;
 
-import com.sun.istack.internal.NotNull;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
@@ -17,7 +16,7 @@ public class NotificationService {
     private JavaMailSender mailSender;
 
     @Async
-    public void sendMimeMessageEmail(@NotNull String toAddress, @NotNull String subject, @NotNull String body, @NotNull String fromAddress) throws Exception {
+    public void sendMimeMessageEmail(String toAddress, String subject, String body, String fromAddress) throws Exception {
         try {
             MimeMessage mimeMessage = mailSender.createMimeMessage();
 
